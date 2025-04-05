@@ -71,8 +71,6 @@ display: none;
 }
 
 
-
-
 .categoeries{
     display: flex;
     padding: 10px;
@@ -84,7 +82,20 @@ display: none;
     color: whitesmoke;
     padding: 10px;
     border-radius: 30px;
+    cursor: pointer;
+    border: solid rgb(3, 128, 218) 1px;
 }
+.categoeries p:hover{
+    transition: 2s;
+    background-color: transparent;
+    color: black;
+    border: solid rgb(3, 128, 218) 1px;
+    
+
+}
+
+
+
 .sale-image{
     position: relative;
 }
@@ -102,9 +113,28 @@ display: none;
    position: absolute;
    top: 10%;
    left: 3%;
-
-
+   animation-name: zoom;
+   animation-duration: 2s;
+   opacity: 0;
+   animation-fill-mode: forwards;
 }
+
+@keyframes zoom{
+   0%{
+    transform: scale(0);
+    opacity: 0;
+   }
+   100%{
+    opacity: 1;
+    transform: scale(1);
+   }
+}
+
+
+
+
+
+
 .recommened{
     padding: 10px;
 
